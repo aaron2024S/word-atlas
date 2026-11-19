@@ -125,6 +125,18 @@ npm run build        # 构建到 dist/
 
 **技术栈**：React 19 · TypeScript · Vite · ts-fsrs · WebGL2
 
+### Docker 运行（本 fork 追加）
+
+原仓库只提供源码，本 fork 补了 `Dockerfile`、`deploy/nginx.conf` 与 GitHub Actions，
+构建结果发布在 Docker Hub。纯静态站点，无需数据库与卷，学习进度存在浏览器本地：
+
+```bash
+docker run -d --name word-atlas -p 8080:80 aaron2024s/word-atlas:latest
+```
+
+或在本目录 `docker compose up -d`（默认 8080，见 `docker-compose.yml`），
+然后打开 <http://localhost:8080>。
+
 ## 开放数据
 
 不仅可以直接使用应用，也可以把词库用于自己的学习工具、Anki 牌组或研究项目。

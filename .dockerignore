@@ -1,0 +1,28 @@
+# 构建只需要 src / public / 几个配置文件，其余一律不送进构建上下文
+.git
+.github
+.gitignore
+node_modules
+dist
+
+# 文档与数据集下载包：不进镜像
+docs
+data
+PUBLIC_MANIFEST.json
+README.md
+README.en.md
+CONTRIBUTING.md
+SECURITY.md
+CONTENT_LICENSE.md
+LICENSE
+
+# 本地私有语料与打包产物
+.local
+output
+*.zip
+
+# 其他
+*.tsbuildinfo
+.DS_Store
+docker-compose.yml
+.dockerignore

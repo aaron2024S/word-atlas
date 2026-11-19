@@ -1,0 +1,10 @@
+# 词光 Word Atlas —— 纯静态站点，一个容器搞定
+# 不需要数据库、不需要挂载卷；学习进度保存在浏览器本地（localStorage）
+services:
+  word-atlas:
+    image: aaron2024s/word-atlas:latest
+    container_name: word-atlas
+    restart: unless-stopped
+    ports:
+      # 左边改成你想用的端口，例如 "8088:80"
+      - "8080:80"
